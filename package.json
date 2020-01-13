@@ -26,7 +26,8 @@
   ],
   "license": "MIT",
   "scripts": {
-    "build": "gatsby build",
+    "copy:cname": "cp ./CNAME ./public/CNAME",
+    "build": "gatsby build && yarn copy:cname",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "npm run develop",
