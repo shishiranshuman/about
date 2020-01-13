@@ -1,5 +1,6 @@
-import React from "react"
-import Helmet from "react-helmet"
+import React from "react";
+import Helmet from "react-helmet";
+import './styles.css';
 
 class Home extends React.Component {
 
@@ -8,29 +9,14 @@ class Home extends React.Component {
       <React.Fragment>
         <Helmet>
           <meta name="robots" content="noindex,nofollow" />
+          <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet" />
         </Helmet>
-        <div style={container}>
-          <h1 style={message}>Nothing to see here.</h1>
+        <div className={`container`}>
+          <h1 className={`message`}>Nothing to see here.</h1>
         </div>
       </React.Fragment>
     );
   }
 }
-
-const container = {
-  width: '100%',
-  height: '100%',
-  display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'center',
-  position: 'fixed',
-  backgroundColor: '#000',
-  margin: '-8px',
-};
-
-const message = {
-  color: '#fff',
-  fontSize: '4vw',
-};
 
 export default Home;
